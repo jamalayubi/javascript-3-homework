@@ -195,8 +195,10 @@ not the best choice, it can be much more difficult to think about and debug.
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
+ {
   function copy_array(arr) {
-    // write this
+    let stringArr = JSON.stringify(arr);
+    return JSON.parse(stringArr);
   }
 
   const array = ['a', 'b'];
@@ -204,13 +206,12 @@ not the best choice, it can be much more difficult to think about and debug.
   console.assert(array[0] === by_copy[0]);
   console.assert(array[1] === by_copy[1]);
   console.assert(array !== by_copy);
-  
+
   const array_2 = [3, 'b', null];
   const by_copy_2 = copy_array(array_2);
   console.assert(array_2[0] === by_copy_2[0]);
   console.assert(array_2[1] === by_copy_2[1]);
   console.assert(array_2 !== by_copy_2);
-     
 }
 ```
 

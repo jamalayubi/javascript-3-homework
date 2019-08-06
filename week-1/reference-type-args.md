@@ -194,7 +194,6 @@ not the best choice, it can be much more difficult to think about and debug.
 
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
-{
  {
   function copy_array(arr) {
     let stringArr = JSON.stringify(arr);

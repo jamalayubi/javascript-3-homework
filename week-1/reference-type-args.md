@@ -276,10 +276,12 @@ not the best choice, it can be much more difficult to think about and debug.
 ```js
 {
   function start_new_object(obj) {
-    // write this by building a new object from scratch
-    // the paramenter should only be used on the right side of =
-    // the new one should only be used on the left side of =
-  } 
+    var newObj = {};
+    for (var property in obj) {
+       newObj[property]=obj[property]
+    }
+    return newObj;
+ } 
   
   const object = {a: 1, b: 2};
   const new_obj = start_new_object(object);
@@ -291,7 +293,7 @@ not the best choice, it can be much more difficult to think about and debug.
   const new_obj_2 = start_new_object(object_2);
   console.assert(object_2.x === new_obj_2.x);
   console.assert(object_2['z'] === new_obj_2['z']);
-  console.assert(object_2['it'] === new_obj_2.ti);
+  console.assert(object_2['it'] === new_obj_2.it);
   console.assert(object_2 !== new_obj_2);
 }
 ```

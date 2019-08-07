@@ -221,12 +221,14 @@ not the best choice, it can be much more difficult to think about and debug.
 ```js
 {
   function start_new_array(arr) {
-    // write this by building a new array from scratch
-    // the paramenter should only be used on the right side of =
-    // the new one should only be used on the left side of =
+    var newArr = [];
+    for (let i = 0; i <= arr.length - 1; i++) {
+       newArr[i]=arr[i]
+    }
+    return newArr;
   }
 
-  const array = ['a', 'b'];
+  const array = ['a', 'b', 'c'];
   const new_array = start_new_array(array);
   console.assert(array[0] === new_array[0]);
   console.assert(array[1] === new_array[1]);

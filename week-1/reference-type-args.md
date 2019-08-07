@@ -221,12 +221,14 @@ not the best choice, it can be much more difficult to think about and debug.
 ```js
 {
   function start_new_array(arr) {
-    // write this by building a new array from scratch
-    // the paramenter should only be used on the right side of =
-    // the new one should only be used on the left side of =
+    var newArr = [];
+    for (let i = 0; i <= arr.length - 1; i++) {
+       newArr[i]=arr[i]
+    }
+    return newArr;
   }
 
-  const array = ['a', 'b'];
+  const array = ['a', 'b', 'c'];
   const new_array = start_new_array(array);
   console.assert(array[0] === new_array[0]);
   console.assert(array[1] === new_array[1]);
@@ -247,7 +249,9 @@ not the best choice, it can be much more difficult to think about and debug.
 ```js
 {
   function copy_object(obj) {
-    // write this
+    let stringObj = JSON.stringify(obj);
+    console.log(stringObj)
+    return JSON.parse(stringObj);
   }
 
   const object = {a: 1, b: 2};
@@ -260,7 +264,7 @@ not the best choice, it can be much more difficult to think about and debug.
   const by_copy_2 = copy_object(object_2);
   console.assert(object_2.x === by_copy_2.x);
   console.assert(object_2['z'] === by_copy_2['z']);
-  console.assert(object_2['it'] === by_copy_2.ti);
+  console.assert(object_2['it'] === by_copy_2.it);
   console.assert(object_2 !== by_copy_2);
 }
 ```
@@ -272,10 +276,12 @@ not the best choice, it can be much more difficult to think about and debug.
 ```js
 {
   function start_new_object(obj) {
-    // write this by building a new object from scratch
-    // the paramenter should only be used on the right side of =
-    // the new one should only be used on the left side of =
-  } 
+    var newObj = {};
+    for (var property in obj) {
+       newObj[property]=obj[property]
+    }
+    return newObj;
+ } 
   
   const object = {a: 1, b: 2};
   const new_obj = start_new_object(object);
@@ -287,7 +293,7 @@ not the best choice, it can be much more difficult to think about and debug.
   const new_obj_2 = start_new_object(object_2);
   console.assert(object_2.x === new_obj_2.x);
   console.assert(object_2['z'] === new_obj_2['z']);
-  console.assert(object_2['it'] === new_obj_2.ti);
+  console.assert(object_2['it'] === new_obj_2.it);
   console.assert(object_2 !== new_obj_2);
 }
 ```

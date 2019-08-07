@@ -1,5 +1,4 @@
 # [JavaScript 3](https://github.com/be-hacking-hyf/javascript-3) Homework Repo
-
 First things first.  Don't Panic!
 
 This homework repo is huge but most of it is code for you to study, not exercises to complete.  As you're working on the assignments each week don't forget to snoop around all the folders.  There is almost always at least 1 similar example for you to study!

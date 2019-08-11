@@ -1,5 +1,5 @@
 function sort_charecters(str) {
-  return str;
+  return ` The sort : ${str.split("").sort().join("")}`;;
 }
 
 function sort_handler() {                                      

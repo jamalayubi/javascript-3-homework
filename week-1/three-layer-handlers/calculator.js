@@ -6,19 +6,19 @@ var results = [];
 
 
 function add(a, b) {
-  return  "the sum of " + a + ' and ' + b;
+  return   a + b;
 }
 
 function subtract(a, b) {
-  return "the difference between " + a + ' and ' + b; 
+  return a - b ; 
 }
 
 function multiply(a, b) {
-  return "the product of " + a + ' and ' + b;
+  return a * b ;
 }
 
 function divide(a, b) {
-  return  "the quotient of " + a + ' and ' + b; 
+  return  a / b ;
 }
 
 
